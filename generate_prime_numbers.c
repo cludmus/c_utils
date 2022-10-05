@@ -5,7 +5,7 @@ int* get_prime_numbers(int size){
     int* primes = (int*) malloc (size*sizeof(int));
     primes[cursor++] = 2;
 
-    for(int i = 3; cursor < size; i++){
+    for(int i = 3; cursor < size; i+=2){
         char has_divisor = 0;
         for(int j = 0; j < cursor && primes[j]*primes[j] <= i; j++){
             if(i % primes[j] == 0){
